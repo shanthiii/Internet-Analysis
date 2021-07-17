@@ -1,0 +1,17 @@
+name: Ensure Clean Jupyter Notebooks
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Set up Python
+      uses: actions/setup-python@main
+    - uses: ResearchSoftwareActions/EnsureCleanNotebooksAction@dev
+      with:
+        disable-checks: outputs
