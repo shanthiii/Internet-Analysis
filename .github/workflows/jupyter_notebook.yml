@@ -25,7 +25,5 @@ jobs:
       run: |
         python -m pip install --upgrade pip wheel setuptools
         pip install runipy
-        pip install -U matplotlib
-        pip install pandas
     - name: Run internet_analysis Jupyter Notebook
       run: runipy internet_analysis.ipynb
