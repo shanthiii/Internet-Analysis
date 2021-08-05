@@ -19,7 +19,7 @@ jobs:
     - name: Analysing the code with Flake8
       run: |
         # disable warning E402 module level import not at top of file
-        flake8 --ignore=E409 *.ipynb
+        nbqa flake8 --ignore=E409 *.ipynb
         # stop the build if there are Python syntax errors or undefined names
         nbqa flake8 *.ipynb --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
